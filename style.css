@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  user-select: none;
+  background: linear-gradient(to left, rgb(23, 1, 59), rgb(49, 4, 71));
+}
+
+.parent {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.coin {
+  width: 250px;
+  background-image: url(./coin1.png);
+  object-fit: cover;
+  background-position: center center;
+  background-color: rgb(115, 99, 6);
+  background-size: contain;
+  height: 250px;
+  display: flex;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.1s;
+}
+
+.coin:active {
+  transform: scale(0.98);
+}
+
+.counter {
+  position: absolute;
+  top: 35%;
+  color: white;
+  font-weight: 900;
+  font-size: 40px;
+  font-family: sans-serif;
+  z-index: 99;
+  left: 35%;
+  transition: top 0.8s, opacity 0.4s;
+}
+
+.title,
+.limit {
+  font-weight: 900;
+  color: rgb(115, 99, 6);
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.limit {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+.earned-coins{
+  color: yellow;
+  font-weight: 800;
+  font-family: monospace;
+  font-size: 30px;
+  text-shadow: 0 0 10px yellow;
+  display: flex;
+  justify-content: center;
+}
+
+.limit-count {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px #fff;
+}
+
+
+
+@media (max-width: 768px) {
+  .limit {
+    font-size: 20px;
+    bottom: 20px;
+    left: 20px;
+  }
+
+  body {
+    padding-top: 50px;
+  }
+}
+
+.earning{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.earnIcon{
+  overflow: hidden;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
