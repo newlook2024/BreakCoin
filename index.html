@@ -3,14 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NotCoin</title>
+    <title>Break Coin</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="dsdsdsdsd.png" />
   </head>
   <body>
     <h1 class="title">Break coin</h1>
+    <h2 class="level-title">
+      Your level <span class="level__counter">1</span>
+    </h2>
     <div class="earning">
       <div class="earnIcon">
-        <img style="width: 100%; transform: scale(1.5);" src="./coin.png" alt="coin" />
+        <img
+          style="width: 100%; transform: scale(1.5)"
+          src="./coin.png"
+          alt="coin"
+        />
       </div>
       <span class="earned-coins">0</span>
     </div>
@@ -18,9 +26,52 @@
       <div class="count-container">
         <div class="coin"></div>
       </div>
+    </div>
+    <div class="bottom-container">
       <h1 class="limit">
         Your limit: <span class="limit-count" id="limit"></span>
       </h1>
+      <button id="level-up-opener" class="levelUpBtn">Level Up</button>
+    </div>
+
+    <!-- MODALS -->
+    <div class="modal-container">
+      <div class="levelUp__modal">
+        <button id="modalCloser"
+          style="
+            position: absolute;
+            right: 20px;
+            background: transparent;
+            color: rgb(245, 238, 193);
+            font-weight: 900;
+            font-size: 12px;
+            border: none;
+          "
+        >
+          X
+        </button>
+        <h3 class="levelUp__modal__title">
+          Next level <span class="next-level" id="next-level">2</span>
+        </h3>
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+          "
+        >
+          <img style="width: 30px; height: 30px" src="./coin.png" alt="coin" />
+          <h4 id="coinForLevel" class="earned-coins1" style="font-size: 20px">5000</h4>
+        </div>
+        <button
+          id="level-up"
+          class="levelUpBtn"
+          style="margin-left: auto; margin-right: auto"
+        >
+          Level Up
+        </button>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>
