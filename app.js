@@ -3,7 +3,7 @@ let container = document.querySelector(".count-container");
 let limit = document.querySelector("#limit");
 let earnedCoins = document.querySelector(".earned-coins");
 
-limit.textContent = 99999999999;
+limit.textContent = 1000;
 let minusCount = 1;
 
 setInterval(() => {
